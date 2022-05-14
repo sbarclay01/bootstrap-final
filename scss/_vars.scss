@@ -1,0 +1,62 @@
+// ************** COLORS ***************
+
+$primary: #d9414e;
+$light: #d8d8d8;
+$dark: rgb(39, 34, 34);
+
+$accent: #04c4d9;
+$dark-primary: #8c2e36;
+$nav-hover: #ffffff;
+
+$body-bg: #fefae0;
+$hero-bg: #faedcd;
+$new-accent: #d4a373;
+$new-lt-green: #e9edc9;
+$new-green-accent: #ccd5ae;
+
+$header-color-services: #ff835d;
+
+.hidden-svg {
+    display: none;
+}
+
+// BREAKPOINTS
+$mobile: 600px;
+$tablet: 900px;
+$desktop: 900px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin media($keys...) {
+    @each $key in $keys {
+        @if ($key == mobile) {
+            @include mobile {
+                @content;
+            }
+        } @else if ($key == tablet) {
+            @include tablet {
+                @content;
+            }
+        } @else if ($key == desktop) {
+            @include desktop {
+                @content;
+            }
+        }
+    }
+}

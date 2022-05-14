@@ -1,0 +1,61 @@
+@import url("https://use.typekit.net/uhn6tma.css");
+
+* {
+    margin: 0;
+}
+
+html {
+    scroll-padding-top: 56px; /* height of navbar */
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    background-color: $body-bg;
+    font-family: bebas-neue-pro, sans-serif !important;
+}
+
+.active {
+    color: $primary;
+}
+
+.btn {
+    border-radius: 5px;
+
+    &-primary {
+        border: none;
+
+        &:hover {
+            background-color: $new-green-accent;
+        }
+    }
+}
+
+.neu-btn {
+    background-color: rgb(189, 69, 173) !important;
+    transform: rotate(2deg);
+    filter: drop-shadow(5px 5px 0px black);
+
+    &:hover {
+        background-color: rgb(69, 189, 91) !important;
+        transform: rotate(-2deg);
+    }
+}
+
+.neu-btn-outline {
+    border: 2px solid rgb(189, 69, 173) !important;
+    transform: rotate(-2deg);
+
+    &:hover {
+        border: 2px solid rgb(69, 189, 91) !important;
+        transform: rotate(2deg);
+        filter: drop-shadow(5px 5px 0px black);
+    }
+}
+
+.gimme-some-space {
+    padding-top: 50px;
+}
